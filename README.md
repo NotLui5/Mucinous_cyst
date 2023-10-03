@@ -1,4 +1,4 @@
-Hyperthyroidism
+Mucinous_cyst
 ================
 Luis A. Figueroa, Paola Pazmiño, et al.
 
@@ -16,5 +16,15 @@ needed, please do not hesitate to contact us.
 </summary>
 
 <br> ![](Figures/dic_graph-1.svg)<!-- -->
+
+</details>
+<details>
+<summary>
+<b>Figure B -</b> Continuous data analysis: Mean Difference (MD) 95%CI
+</summary>
+
+<br>
+
+![](Figures/cont_graph-1.svg)<!-- -->
 
 </details>
