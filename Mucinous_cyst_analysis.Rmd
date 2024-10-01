@@ -8,6 +8,9 @@ output: github_document
 
 The purpose of this site is to make our meta-analysis as transparent as possible. All information or documents used, from the protocol to the final publication, will be available here. If further information is needed, please do not hesitate to contact us.
 
+About our search strategy, you can find more information in this repository:
+[Actual Search Strategies Update Dec 19 2022]("./Mucinous_cyst/Actual Search Strategies Update Dec 19 2022.docx")
+
 ```{r setup, include=FALSE}
 library(metafor)
 library(tidyverse)
