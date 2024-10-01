@@ -12,7 +12,7 @@ needed, please do not hesitate to contact us.
 
 About our search strategy, you can find more information in this
 repository: [Actual Search Strategies Update Dec 19
-2022](%22./Mucinous_cyst/Actual%20Search%20Strategies%20Update%20Dec%2019%202022.docx%22)
+2022](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FNotLui5%2FMucinous_cyst%2Frefs%2Fheads%2Fmain%2FActual%2520Search%2520Strategies%2520Update%2520Dec%252019%25202022.docx&wdOrigin=BROWSELINK)
 
 <details>
 <summary>
