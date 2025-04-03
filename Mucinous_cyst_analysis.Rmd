@@ -271,10 +271,21 @@ data4 <- read.xlsx("Tumor size.xlsx")
 data_ts <- data4[,-11]
 names(data_ts) <- c("author", "int", "comp", "outcome", "n1", "n2", "mean_post1",
                     "sd_post1", "mean_post2", "sd_post2")
+data_ts$author[1] <- "Crippa, et.al., 2008"
+data_ts$author[2] <- "Yamao, K., et al., 2011"
+data_ts$author[3] <-"Gil, E., et al., 2012"
 data_ts$author[5] <- "Keane., et al., 2018"
+data_ts$author[4] <- "Jang, K. T., et al., 2015"
 
+
+x1 <- data_ts$mean_post1[2] #Error in extraction data of Yamao, K., et al., paper 
+x2 <- data_ts$sd_post1[2]  
+data_ts$mean_post1[2] <- data_ts$mean_post2[2] 
+data_ts$sd_post1[2] <- data_ts$sd_post2[2] 
+data_ts$mean_post2[2] <- x1
+data_ts$sd_post2[2] <- x2
 data_ts$mean_post1 <- as.numeric(data_ts$mean_post1)
-data_ts$sd_post1 <- as.numeric(data_ts$sd_post2)
+data_ts$sd_post1 <- as.numeric(data_ts$sd_post1)
 data_ts$mean_post2 <- as.numeric(data_ts$mean_post2)
 data_ts$sd_post2 <- as.numeric(data_ts$sd_post2)
 
@@ -292,7 +303,7 @@ tt_data_ts <- table_md(analysis = data_ts_md, nstudies = 2,
 <summary><b>Figure A -</b> Dichotomous data analysis: Odds Ratio (OR) 95%CI </summary>
 
 <br>
-```{r dic_graph, echo=FALSE, fig.height=5.9, fig.width=13.18, message=FALSE, warning=FALSE}
+```{r dic_graph, echo=FALSE, fig.height=6.9, fig.width=14.7, message=FALSE, warning=FALSE}
 title_or <- c('', paste0('Invasive (n/N)'),
             paste0('Non-invasive (n/N)'),
             paste0('Odds Ratio (OR) 95%CI'), 
@@ -340,7 +351,7 @@ plot_dic <- forestplot(subtotal1,
                               ticks = gpar(cex = 0.9, fontface="bold"),
                               summary = gpar(cex = 0.9),
                               xlab = gpar(cex=0.9)),
-             xticks = log(c(0.5,1,5,15,60)),
+             xticks = c(0.5,1,5,15,60),
              xlog=T,
              clip = c(0.5,60),
              grid = c(0.5,5,15,60),
@@ -362,7 +373,7 @@ plot_dic
 
 <br>
 
-```{r cont_graph, echo=FALSE, fig.height=3, fig.width=14.9, message=FALSE, warning=FALSE}
+```{r cont_graph, echo=FALSE, fig.height=3.3, fig.width=14.9, message=FALSE, warning=FALSE}
 title_cont <- c('Tumor size', paste0('Invasive (N)'), "mean (SD)",
             paste0('Non-invsive (N)'), "mean (SD)",
             paste0('Mean Difference (MD) 95%CI'),
